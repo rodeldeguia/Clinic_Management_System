@@ -99,6 +99,7 @@ class LoginController extends Controller
     public function sendResetLink(Request $request)
     {
         return back()->with('status', 'Password reset link sent.');
+        
     }
 
     public function showResetForm($token)
