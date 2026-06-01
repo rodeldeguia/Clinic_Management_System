@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label>Date of Birth</label>
-                    <input type="date" name="date_of_birth" class="form-control" value="{{ old('date_of_birth', $doctor->date_of_birth) }}">
+                    <input type="date" name="date_of_birth" class="form-control" value="{{ old('date_of_birth', \Carbon\Carbon::parse($doctor->date_of_birth)->format('Y-m-d')) }}">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label>Status</label>

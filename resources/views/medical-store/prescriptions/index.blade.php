@@ -30,7 +30,7 @@
             <table class="table table-bordered table-hover">
                 <thead class="table-light">
                     <tr>
-                        <th>#</th>
+                        <th>No.</th>
                         <th>Date</th>
                         <th>Patient</th>
                         <th>Doctor</th>

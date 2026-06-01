@@ -98,6 +98,7 @@ class DoctorManagementController extends Controller
             'lastname' => 'required|string',
             'contact_number' => 'required',
             'email_address' => 'required|email|unique:users,email_address,' . $id . ',user_id',
+            'date_of_birth' => 'required|date',
             'specialization' => 'required',
             'qualification' => 'required',
             'shift_timing' => 'nullable',

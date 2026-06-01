@@ -10,8 +10,7 @@ class Prescription extends Model
     use HasFactory;
 
     protected $primaryKey = 'prescription_id';
-    public $timestamps = false;  // ← Make sure this is here
-
+    public $timestamps = false;  
     protected $fillable = [
         'record_id', 
         'medicine_id', 
@@ -28,7 +27,7 @@ class Prescription extends Model
     ];
 
 
-    // Use this to order by prescription_id instead of created_at
+  
     public function scopeLatest($query)
     {
         return $query->orderBy('prescription_id', 'desc');

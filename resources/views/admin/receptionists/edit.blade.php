@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label>Username</label>
-                    <input type="text" class="form-control" value="{{ $receptionist->username }}" disabled>
+                    <input type="text" name="username" class="form-control" value="{{ $receptionist->username }}">
                     <small class="text-muted">Username cannot be changed</small>
                 </div>
                 <div class="col-md-6 mb-3">

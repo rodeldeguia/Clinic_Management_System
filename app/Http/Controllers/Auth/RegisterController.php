@@ -19,8 +19,8 @@ class RegisterController extends Controller
         $request->validate([
             'username' => 'required|unique:users,username',
             'password' => 'required|min:6|confirmed',
-            'firstname' => 'required|string',
-            'lastname' => 'required|string',
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
             'contact_number' => 'required',
             'email_address' => 'nullable|email|unique:users,email_address',  // ← Changed from 'email' to 'email_address'
             'address' => 'required',
@@ -35,8 +35,8 @@ class RegisterController extends Controller
             'password_hashed' => Hash::make($request->password),
             'role' => 'patient',
             'is_active' => true,
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
+            'firstname' => $request->first_name,
+            'lastname' => $request->last_name,
             'contact_number' => $request->contact_number,
             'email_address' => $request->email_address,  // ← Changed from 'email'
             'address' => $request->address,

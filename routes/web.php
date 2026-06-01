@@ -46,9 +46,10 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 // Home/Landing Page
+// Landing Page
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('landing');
+})->name('landing');
 
 // Authentication Routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

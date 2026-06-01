@@ -104,6 +104,7 @@ class ReceptionistManagementController extends Controller
     $request->validate([
         'firstname' => 'required|string',
         'lastname' => 'required|string',
+        'username' => 'required|unique:users,username,' . $id . ',user_id',
         'contact_number' => 'required',
         'email_address' => 'required|email|unique:users,email_address,' . $id . ',user_id',
         'shift_timing' => 'required',
@@ -113,6 +114,7 @@ class ReceptionistManagementController extends Controller
     $updateData = [
         'firstname' => $request->firstname,
         'lastname' => $request->lastname,
+        'username' => $request->username,
         'contact_number' => $request->contact_number,
         'email_address' => $request->email_address,
         'address' => $request->address,

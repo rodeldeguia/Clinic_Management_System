@@ -62,7 +62,7 @@
                             @else
                                 <span class="badge bg-success">Good</span>
                             @endif
-                         </div>
+                         
                         <td>
                             <a href="{{ route('medical-store.stock.edit', $item->stock_id) }}" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i>
@@ -88,14 +88,16 @@
                         </td></tr>
                     @endforelse
                 </tbody>
-            </div>
+            </table>
         </div>
+    </div>
         
         <div class="d-flex justify-content-center mt-3">
             {{ $stock->links() }}
         </div>
-    </div>
 </div>
+
+
 
 @foreach($stock as $item)
 <!-- Add Stock Modal -->
